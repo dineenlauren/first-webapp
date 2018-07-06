@@ -2,10 +2,10 @@
   <div class="hello">
     <h1>{{ msg1 }}</h1>
     <p>What is {{ num1 }} times {{ num2 }}?</p>
-    <p><span v-if="product"> It's {{ product }}!</span></p>
+    <p class="answer"><span v-if="product"> It's {{ product }}!</span></p>
     <button v-on:click="calculateProduct">Calculate</button>
     <h2>2 Things that are difficult in JavaScript</h2>
-    <ol>
+    <ol class="center">
       <li>naming things</li>
       <li>recursion</li>
       <li>off-by-one errors</li>
@@ -34,6 +34,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.center {
+  list-style-position: inside;
+}
+
 h1, h2 {
   font-weight: normal;
 }
@@ -47,6 +52,16 @@ ol {
 li {
   display: list-item;
   margin: 0 10px;
+}
+
+.answer {
+  font-weight: 600;
+  color: #42b983;
+}
+
+p {
+  font-style: italic;
+  font-size: 1.5rem;
 }
 
 a {
